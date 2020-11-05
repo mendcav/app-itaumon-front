@@ -65,7 +65,7 @@ function logar(){
         }
     };
 
-    fetch("http://localhost:8080/login", conteudo)
+    fetch(API+"/login", conteudo)
         .then(res => res.json())
         .then(res => {
             window.alert("Seja bem vindo, " + res.nome + "!");
