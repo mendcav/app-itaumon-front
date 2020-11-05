@@ -1,0 +1,72 @@
+p{
+    color:red;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14px;
+}        
+body{
+    background-color:rgb(239, 240, 179)
+    }
+.menu{
+    color:green;
+    font-family: verdana;
+    font-size: 14px;
+    font-weight: bold;
+        
+}
+ .fonte_especial{
+    color:indigo;
+    font-family: Impact;
+    font-size: 14px;
+
+
+}
+#formulario_contato{
+    background-color: yellowgreen;
+}
+
+label{
+    color:rebeccapurple;
+    font-family: verdana;
+    font-size: 12px;
+         
+}
+
+.caixa_nome{
+    width: 250px;
+    background-color: sandybrown;
+    color:white;
+    /*position: relative;      /* utilizamos a opção position como absolute, poara o comando left começar a contar do pixel 0 
+    left: 80px;*/
+
+}
+
+.caixa_email{
+    width: 300px;
+    background-color: sandybrown;
+    color:white;
+    /*position: relative;
+    left: 95px;*/
+}
+
+.caixa_senha{
+    width: 150px;
+    background-color: sandybrown;
+    color:white;
+}
+.container {
+    border: 3px solid rgb(44, 43, 43);
+    width: 500px;
+}
+
+.div1 {
+    background-color: rgb(202, 86, 86);
+}
+.div2 {
+    background-color: rgb(84, 161, 84);
+}
+.div3 {
+    background-color: rgb(204, 204, 83);
+}
+.div4 {
+    background-color: rgb(111, 111, 170);
+}
