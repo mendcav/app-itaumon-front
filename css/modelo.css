@@ -46,7 +46,7 @@
     }
     h2{
       font-size: 20px;
-      color: #066a75;
+      color: #446040;
       padding: 10px 0;
       font-family: Arial,sans-serif;
       font-weight: bold;
@@ -280,3 +280,31 @@
       transform: translateX(-20px);
     }
   }
+
+  .text-on-pannel {
+    background: #fff none repeat scroll 0 0;
+    height: auto;
+    color: #405c60;
+    margin-left: 20px;
+    padding: 3px 5px;
+    position: absolute;
+    margin-top: -47px;
+    border: 1px solid #405c60;
+    border-radius: 8px;
+  }
+  
+  .panel {
+    /* for text on pannel */
+    margin-top: 27px !important;
+  }
+  
+  .panel-body {
+    padding-top: 30px !important;
+  }
+
+  /*.container img {
+    max-width:300px;
+    max-height:150px;
+    width: auto;
+    height: auto;*/
+}

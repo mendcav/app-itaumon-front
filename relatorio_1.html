@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 
- 
+
 
 <head>
   <meta charset="UTF-8">
@@ -9,38 +9,45 @@
   <title>Relatorio de Alarme</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-  <!--<link rel="stylesheet" href="css/modelo.css">-->
+  <link rel="stylesheet" href="css/modelo.css">
   <!--<link rel="stylesheet" href="css/estilos.css">-->
-  <script type = "text/javascript" src ="js/config.js"></script>
+  <script type="text/javascript" src="js/config.js"></script>
   <script type="text/javascript" src="js/usuario.js"></script>
   <script type="text/javascript" src="js/relat1.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.4.1/jspdf.debug.js" integrity="sha384-THVO/sM0mFD9h7dfSndI6TS0PgAGavwKvB5hAxRRvc0o9cPLohB0wb/PTA7LdUHs" crossorigin="anonymous"></script>
+
 </head>
 
- 
+
 
 <body>
-  <div class="container">
+  <div class="container-fluid">
     <div class="row">
-        <div class="col-12">
-            <h3 class="text-center">EventDash - Relatorio de Eventos</h3>
+      <div class="col-9">
+        <h3 class="text-center">EventDash - Relatorio de Eventos</h3>
+      </div>
+      <div class="col-3">
+        <a href="index.html" aling="right" type="button" class="btn btn-primary btn-lg">Logout</a>
+      </div>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="basic-addon1">Início</span>
 
-            <div class="input-group mb-3">
-                <div class="input-group-prepend">
-                  <span class="input-group-text" id="basic-addon1">Início</span>
-                
-                
-                </div>
-                <input id="datainicio" type="date" class="form-control" placeholder="inicio" aria-label="datai" aria-describedby="basic-addon1">
-                <span class="input-group-text" id="basic-addon1">Fim</span>
-                <input id="datafim" type="date" class="form-control" placeholder="fim" aria-label="dataf" aria-describedby="basic-addon1">
-              
-            </div>    
-              <br>
-              <button onclick="filtrar()" type="button" class="btn btn-primary">Gerar Relatório</button><br><br>
+
         </div>
-        <div id="resultado"></div>
-    </div>
-</div>
+        <input id="datainicio" type="date" class="form-control" placeholder="inicio" aria-label="datai"
+          aria-describedby="basic-addon1">
+        <span class="input-group-text" id="basic-addon1">Fim</span>
+        <input id="datafim" type="date" class="form-control" placeholder="fim" aria-label="dataf"
+          aria-describedby="basic-addon1">
+
+      </div>
+      <br>
+      <button onclick="filtrar()" type="button" class="btn btn-primary">Gerar Relatório</button><br><br>
+    </div><br>
+    <div id="resultado"></div>
+
+  </div>
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
     integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
     crossorigin="anonymous"></script>
@@ -51,4 +58,5 @@
     integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
     crossorigin="anonymous"></script>
 </body>
+
 </html>

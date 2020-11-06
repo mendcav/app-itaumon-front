@@ -44,10 +44,12 @@ function carregarusuario(){
     }else{
         var usuarioJson = JSON.parse(usuario);
         document.getElementById("foto").innerHTML=
-        "<img width='20%' heigth='20%' alt='Sem foto' src=imagens/" + usuarioJson.foto + ">";
+        "<img width='100%' heigth='100%' alt='Sem foto' src=imagens/" + usuarioJson.foto + ">";
         
         document.getElementById("dados").innerHTML=
-        "<h5>Nome: " + usuarioJson.nome + "<br>Email: " + usuarioJson.email + "</h5>";
+        "<h5>Nome: " + usuarioJson.nome + 
+        "<br>RACF: " + usuarioJson.racf + 
+        "<br>Email: " + usuarioJson.email + "</h5>";
     }
 }
 

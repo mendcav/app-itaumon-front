@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Usuario</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/modelo.css">
     <script type = "text/javascript" src ="js/config.js"></script>
     <script type="text/javascript" src="js/usuario.js"></script>
 </head>
 <body onload="carregarusuario()">
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
             <div class="col-9">
                 <h3 class="text-center">Dash Card System</h3>                
@@ -22,25 +23,41 @@
         </div>
 
         <div class="row">
-            <div id="foto" class="col-12">
-                            
-            </div>
-           
+            <div id="foto" class="col-lg-2 col-md-2 col-sm-2 col-xs-4 div2"></div>
+            <div id="dados" class="col-lg-3 col-md-3 col-sm-6 div2"></div>
         </div>
 
-        <div class="row">
+        <!--<div class="row">
+            <div id="foto" class="col-lg-2 col-md-2 col-sm-2 col-xs-4 div2"></div>
+            <div id="dados" class="col-lg-3 col-md-3 col-sm-3 col-xs-3 div2"></div>
+        </div>-->
+
+        <!--<div class="row">
             <div id="dados" class="col-12">
 
             </div>
         </div>
-        <br>
-        <form name="selecionar_relat">
-            <fieldset>
-                <legend> Selecione seu Relatório </legend>
+        <br>-->
+        <!--<form name="selecionar_relat">
+            <div class="form-group">
+            <fieldset class="border p-2">
+                <legend class="w-auto"> Selecione seu Relatório </legend>
                 <h2><a href="relatorio_1.html">Relatório de Eventos por período</a><br>
                 <a href="relatorio_2.html">Relatório consolidado por alarmes</a></h2>
             </fieldset>
-        </form>
+            </div>
+        </form>-->
+
+        <div class="container">
+            <div class="panel panel-primary">
+              <div class="panel-body">
+                <h2 class="text-on-pannel text-primary"> Selecione seu Relatório </h2>                
+                    <p><a href="relatorio_1.html">Relatório de Eventos por período</a></p>
+                    <p></p><a href="relatorio_2.html">Relatório consolidado por alarmes</a></p>                
+              </div>
+            </div>
+        </div>
+
     </div>
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
