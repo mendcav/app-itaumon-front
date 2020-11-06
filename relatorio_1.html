@@ -10,13 +10,12 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <link rel="stylesheet" href="css/modelo.css">
-  <!--<link rel="stylesheet" href="css/estilos.css">-->
+    
   <script type="text/javascript" src="js/config.js"></script>
   <script type="text/javascript" src="js/usuario.js"></script>
   <script type="text/javascript" src="js/relat1.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.4.1/jspdf.debug.js" integrity="sha384-THVO/sM0mFD9h7dfSndI6TS0PgAGavwKvB5hAxRRvc0o9cPLohB0wb/PTA7LdUHs" crossorigin="anonymous"></script>
-
-</head>
+  
+  </head>
 
 
 
@@ -46,8 +45,18 @@
       <button onclick="filtrar()" type="button" class="btn btn-primary">Gerar Relatório</button><br><br>
     </div><br>
     <div id="resultado"></div>
-
   </div>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12">
+      <button onclick="CriaPDF()" id="exportButton" class="btn btn-lg btn-danger clearfix"><span class="fa fa-file-pdf-o"></span> Exportar para PDF</button>
+      <!--<button class="btn btn btn-primary" id="btnImprimir" onclick="CriaPDF()">PDF</button>-->
+      <!--<button onclick="CriaPDF()" type="button" class="btn btn-primary">Exportar para PDF</button>-->
+      </div>
+    </div>    
+  </div>  
+
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
     integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
     crossorigin="anonymous"></script>
