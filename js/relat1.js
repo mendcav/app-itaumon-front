@@ -1,6 +1,6 @@
 function filtrar() {
-    fetch (API+"cadastro/" + document.getElementById("txtinicio").value + 
-    "/" + document.getElementById("txtfim").vaue)
+    fetch (API+"/data/" + document.getElementById("datainicio").value + 
+    "/" + document.getElementById("datafim").value)
         .then(res => res.json())
         .then(res => montartabela (res));
 }
@@ -8,7 +8,7 @@ function filtrar() {
 function montartabela(lista){
 
     var tabela =
-    "<table border='1' align='center' width='80%' cellspacing='2'>" +
+    "<table class='table' border='1' align='center' width='80%' cellspacing='2'>" +
     "<tr>" +
     "<th>Data</th>" + 
     "<th>Alarme</th>"+
@@ -18,9 +18,9 @@ function montartabela(lista){
     for (cont=0;cont<lista.length;cont++){
         tabela+= 
         "<tr>" +
-        "<td>" + lista[cont].titulo + "</td>" + 
-        "<td>" + lista[cont].artista.nomeArtistico + "</td>" + 
-        "<td>" + lista[cont].cadastro + "</td></tr>";
+        "<td>" + lista[cont].data + "</td>" + 
+        "<td>" + lista[cont].alarme.nome + "</td>" + 
+        "<td>" + lista[cont].equipamento.hostnome + "</td></tr>";
     }
 
     tabela+="</table>";
