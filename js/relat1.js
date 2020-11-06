@@ -47,3 +47,38 @@ function CriaPDF() {
     win.document.close();                                            // FECHA A JANELA
     win.print();                                                            // IMPRIME O CONTEUDO
 }
+
+function exportar() {
+ 
+    fetch(API+"/data/" +
+    document.getElementById("datainicio").value + 
+    "/" + document.getElementById("datafim").value)
+        .then(res => res.json())
+        .then(res => gerarCSV(res));
+ 
+}
+ 
+function gerarCSV(lista) {
+   
+    let relatorio = document.getElementById("lista");
+ 
+    if (lista == null || lista.lenght == 0) {
+        relatorio.innerHTML = `<p>Nenhum registro encontrado.</p>`;
+        return;
+    }
+    
+    let csv = "";
+    
+    lista.forEach(resultado => {
+       // csv += `${e.campo1};${e.campo2};${e.campo3};\n`;
+        csv += `${resultado.data};${resultado.alarme.nome};${resultado.equipamento.hostnome}\n`;        
+    });
+    let hiddenElement = document.createElement('a');
+    hiddenElement.href = 'data:text/csv;charset=utf-8,' + encodeURI(csv);
+    hiddenElement.target = '_blank';
+    hiddenElement.download = 'solicitacoes.csv'
+    hiddenElement.click();
+
+    
+ 
+}

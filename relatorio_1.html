@@ -42,19 +42,24 @@
 
       </div>
       <br>
-      <button onclick="filtrar()" type="button" class="btn btn-primary">Gerar Relatório</button><br><br>
-    </div><br>
+      <div class="row">
+        <div class="col-12">
+          <button onclick="filtrar()" type="button" class="btn btn-primary">Gerar Relatório</button>
+          <button onclick="CriaPDF()" type="button" class="btn btn-primary">Export to PDF</button>
+          <button onclick="exportar()" type="button" class="btn btn-primary">Export to Excel</button>
+        </div><br><br>
+      </div>
     <div id="resultado"></div>
   </div>
 
-  <div class="container-fluid">
+  <div class="container">
     <div class="row">
       <div class="col-12">
-      <button onclick="CriaPDF()" id="exportButton" class="btn btn-lg btn-danger clearfix"><span class="fa fa-file-pdf-o"></span> Exportar para PDF</button>
-      <!--<button class="btn btn btn-primary" id="btnImprimir" onclick="CriaPDF()">PDF</button>-->
+      <!--<button onclick="exportar()" id="exportButton" class="btn btn-lg btn-danger clearfix"><span class="fa fa-file-pdf-o"></span> Exportar para Excel</button>-->
       <!--<button onclick="CriaPDF()" type="button" class="btn btn-primary">Exportar para PDF</button>-->
+      <!--<button onclick="exportar()" style="margin-left: 10px;" type="button" class="btn btn-primary">Exportar para Excel</button>-->
       </div>
-    </div>    
+      </div>    
   </div>  
 
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"

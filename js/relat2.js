@@ -45,3 +45,39 @@ function CriaPDF() {
     win.document.close();                                            // FECHA A JANELA
     win.print();                                                            // IMPRIME O CONTEUDO
 }
+
+function exportar() {
+ 
+    fetch(API+"/contador/" +
+    document.getElementById("datainicio").value + 
+    "/" + document.getElementById("datafim").value)
+        .then(res => res.json())
+        .then(res => gerarCSV(res));
+ 
+}
+ 
+function gerarCSV(resultado) {
+ 
+    let relatorio = document.getElementById("resultado");
+
+    if (resultado == null || resultado.lenght == 0) {
+        relatorio.innerHTML = `<p>Nenhum registro encontrado.</p>`;
+        return;
+    }
+    
+    let csv = "";
+
+    for (cont=0;cont<resultado.length;cont+=2){
+        csv += `${resultado[cont]};${resultado[cont+1]};\n`; 
+   
+
+         
+    };
+
+    let hiddenElement = document.createElement('a');
+    hiddenElement.href = 'data:text/csv;charset=utf-8,' + encodeURI(csv);
+    hiddenElement.target = '_blank';
+    hiddenElement.download = 'solicitacoes.csv'
+    hiddenElement.click();
+
+}
